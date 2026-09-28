@@ -1,0 +1,21 @@
+{
+  "name": "Taste of Ethiopia Den Haag",
+  "short_name": "Taste of Ethiopia",
+  "description": "Authentiek Ethiopisch restaurant in Den Haag Chinatown. Ambachtelijke teff injera, langzaam gegaarde wot stoofgerechten en eeuwenoude gastvrijheid.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF7F2",
+  "theme_color": "#FAF7F2",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/images/logo.svg",
+      "sizes": "120x120",
+      "type": "image/svg+xml"
+    }
+  ]
+}
