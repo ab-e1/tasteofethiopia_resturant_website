@@ -1,26 +1,35 @@
 import { Hero } from '@/components/home/Hero';
+import { VisualPause } from '@/components/home/VisualPause';
 import { CulturalStory } from '@/components/home/CulturalStory';
 import { SignatureFeasts } from '@/components/home/SignatureFeasts';
 import { BunnaCeremony } from '@/components/home/BunnaCeremony';
-import { HomeVisitAndOrder } from '@/components/home/HomeVisitAndOrder';
+import { EditorialReservation } from '@/components/home/EditorialReservation';
+import { VisitSection } from '@/components/home/VisitSection';
 
 export default function HomePage() {
   return (
     <>
-      {/* 1. Atmospheric Hero with Culinary Welcome & Dual CTAs */}
+      {/* 1. Atmospheric Hero */}
       <Hero />
 
-      {/* 2. The Communal Table & Cultural Story (id="about") */}
+      {/* 2. Photographic Breathing Room */}
+      <VisualPause />
+
+      {/* 3. Cultural Dining Philosophy */}
       <CulturalStory />
 
-      {/* 3. Signature Feasts Showcase (id="menu") */}
+      {/* 4. Editorial Food Feature */}
       <SignatureFeasts />
 
-      {/* 4. The Sacred Bunna Coffee Ceremony */}
+      {/* 5. Bunna Coffee Ritual */}
       <BunnaCeremony />
 
-      {/* 5. Visit & Online Ordering Anchors */}
-      <HomeVisitAndOrder />
+      {/* 6. Reservation Conversion */}
+      <EditorialReservation />
+
+      {/* 7. Architectural Visit & Practical Details */}
+      <VisitSection />
     </>
   );
 }
+

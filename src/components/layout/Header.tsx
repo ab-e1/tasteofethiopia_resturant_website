@@ -35,19 +35,19 @@ export function Header() {
           isScrolled ? 'border-border shadow-subtle' : 'border-border/60'
         }`}
       >
-        <div className="max-w-content mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
+        <div className="max-w-content mx-auto px-4 sm:px-6 md:px-12 h-20 flex items-center justify-between">
           {/* Brand Identity / Logo */}
           <Link
             href="/"
-            className="group flex items-center gap-3 focus-ring rounded py-1 pr-2"
+            className="group flex items-center gap-2.5 sm:gap-3 focus-ring rounded py-1 pr-2 shrink-0"
             aria-label={`${RESTAURANT_CONFIG.name} — Home`}
           >
-            <BrandLogo className="w-10 h-10 sm:w-11 sm:h-11 shrink-0 rounded shadow-subtle group-hover:scale-105 transition-transform" />
+            <BrandLogo className="w-9 h-9 sm:w-11 sm:h-11 shrink-0 rounded shadow-subtle group-hover:scale-105 transition-transform" />
             <div className="flex flex-col">
-              <span className="text-[11px] font-sans font-semibold uppercase tracking-wider text-berbere">
+              <span className="hidden sm:block text-[11px] font-sans font-semibold uppercase tracking-wider text-berbere">
                 {TRANSLATIONS.nav.taglineCity[language]}
               </span>
-              <span className="text-xl sm:text-2xl font-serif font-semibold tracking-tight text-primary group-hover:text-berbere transition-colors">
+              <span className="text-base sm:text-xl lg:text-2xl font-serif font-semibold tracking-tight text-primary group-hover:text-berbere transition-colors whitespace-nowrap">
                 {RESTAURANT_CONFIG.name}
               </span>
             </div>
@@ -55,7 +55,7 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav
-            className="hidden md:flex items-center gap-5 lg:gap-7"
+            className="hidden lg:flex items-center gap-3.5 xl:gap-6 text-sm"
             aria-label="Main navigation"
           >
             <Link
@@ -128,7 +128,7 @@ export function Header() {
           </nav>
 
           {/* Mobile Actions: Language toggle + Reserve quick link + Hamburger toggle */}
-          <div className="flex items-center gap-2 md:hidden">
+          <div className="flex items-center gap-1.5 sm:gap-2 lg:hidden">
             {/* Mobile Compact Language Switcher */}
             <div
               role="group"
@@ -138,7 +138,7 @@ export function Header() {
               <button
                 type="button"
                 onClick={() => setLanguage(language === 'nl' ? 'en' : 'nl')}
-                className="min-h-[44px] px-2.5 py-1 rounded text-primary font-bold focus-ring uppercase"
+                className="min-h-[44px] px-2 sm:px-2.5 py-1 rounded text-primary font-bold focus-ring uppercase text-xs"
                 aria-label={`Taal wisselen (huidig: ${language.toUpperCase()})`}
               >
                 {language === 'nl' ? 'NL' : 'EN'}
@@ -147,18 +147,18 @@ export function Header() {
 
             <Link
               href="/reserve"
-              className="min-h-[48px] px-3.5 inline-flex items-center justify-center rounded bg-berbere hover:bg-berbere-hover text-white text-xs font-medium transition-colors focus-ring"
+              className="min-h-[44px] min-w-[44px] px-2.5 sm:px-3.5 inline-flex items-center justify-center rounded bg-berbere hover:bg-berbere-hover text-white text-xs font-medium transition-colors focus-ring"
               aria-label={TRANSLATIONS.nav.reserveTable[language]}
             >
-              <Calendar className="w-4 h-4 mr-1.5" aria-hidden="true" />
-              <span>{language === 'nl' ? 'Reserveer' : 'Reserve'}</span>
+              <Calendar className="w-4 h-4 sm:mr-1.5" aria-hidden="true" />
+              <span className="hidden sm:inline">{language === 'nl' ? 'Reserveer' : 'Reserve'}</span>
             </Link>
 
             <button
               ref={menuButtonRef}
               type="button"
               onClick={() => setIsOpen(true)}
-              className="min-h-[48px] min-w-[48px] inline-flex items-center justify-center rounded text-primary hover:text-berbere hover:bg-surface transition-colors focus-ring"
+              className="min-h-[44px] min-w-[44px] inline-flex items-center justify-center rounded text-primary hover:text-berbere hover:bg-surface transition-colors focus-ring"
               aria-label={TRANSLATIONS.nav.openMenu[language]}
               aria-expanded={isOpen}
               aria-controls="mobile-nav-dialog"
