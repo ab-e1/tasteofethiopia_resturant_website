@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { MapPin, ArrowUpRight, UtensilsCrossed } from 'lucide-react';
+import { MapPin, ArrowUpRight, UtensilsCrossed, ShoppingBag } from 'lucide-react';
 import { RESTAURANT_CONFIG } from '@/config/restaurant';
 import { useLanguage } from '@/context/LanguageContext';
 import { TRANSLATIONS } from '@/config/translations';
@@ -83,22 +83,25 @@ export function VisitSection() {
               </p>
             </div>
 
-            {/* Order Online Footnote */}
-            <div id="order" className="pt-6 border-t border-border/60 scroll-mt-24 space-y-3">
-              <span className="text-xs font-semibold uppercase tracking-wider text-terracotta font-sans block">
-                {tVisit.orderTitle[language]}
-              </span>
+            {/* Order Online Information */}
+            <div id="order" className="p-6 rounded-lg bg-surface border border-border/80 scroll-mt-24 space-y-3 shadow-subtle">
+              <div className="flex items-center gap-2 text-terracotta">
+                <ShoppingBag className="w-4 h-4" aria-hidden="true" />
+                <span className="text-xs font-semibold uppercase tracking-wider font-sans">
+                  {tVisit.orderTitle[language]}
+                </span>
+              </div>
               <p className="text-sm font-sans text-muted leading-relaxed">
                 {tVisit.orderText[language]}
               </p>
               <div className="pt-1">
                 <Link
                   href="/order"
-                  className="min-h-[48px] inline-flex items-center gap-2 text-sm font-semibold text-berbere hover:text-berbere-hover border-b border-berbere/40 hover:border-berbere pb-1 transition-colors focus-ring"
+                  className="min-h-[44px] px-5 py-2.5 rounded bg-berbere hover:bg-berbere-hover text-white inline-flex items-center gap-2 text-sm font-semibold transition-colors focus-ring shadow-sm"
                 >
                   <UtensilsCrossed className="w-4 h-4" aria-hidden="true" />
                   <span>{tVisit.orderCta[language]}</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
+                  <ArrowUpRight className="w-3.5 h-3.5 ml-0.5" aria-hidden="true" />
                 </Link>
               </div>
             </div>

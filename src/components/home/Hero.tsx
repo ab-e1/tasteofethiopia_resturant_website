@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Calendar, UtensilsCrossed } from 'lucide-react';
+import { Calendar, UtensilsCrossed, ShoppingBag } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { TRANSLATIONS } from '@/config/translations';
 
@@ -46,21 +46,30 @@ export function Hero() {
             {tHero.subtitle[language]}
           </p>
 
-          {/* Dual CTAs */}
-          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+          {/* Action CTAs */}
+          {/* Action CTAs: 2 Primary Spiced Buttons + Editorial Menu Link */}
+          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 flex-wrap">
             <Link
               href="/reserve"
-              className="min-h-[48px] px-7 py-3.5 rounded bg-berbere hover:bg-berbere-hover text-white text-sm font-semibold inline-flex items-center justify-center gap-2.5 transition-colors focus-ring shadow-sm"
+              className="min-h-[48px] px-6 py-3.5 rounded bg-berbere hover:bg-berbere-hover text-white text-sm font-semibold inline-flex items-center justify-center gap-2.5 transition-colors focus-ring shadow-subtle hover:shadow-elevated"
             >
               <Calendar className="w-4 h-4" aria-hidden="true" />
               <span>{tHero.reserveCta[language]}</span>
             </Link>
 
             <Link
-              href="/menu"
-              className="min-h-[48px] px-7 py-3.5 rounded bg-white/10 hover:bg-white/20 border border-white/40 hover:border-white text-white text-sm font-semibold inline-flex items-center justify-center gap-2.5 transition-colors focus-ring backdrop-blur-sm"
+              href="/order"
+              className="min-h-[48px] px-6 py-3.5 rounded bg-terracotta hover:bg-[#b85e43] text-white text-sm font-semibold inline-flex items-center justify-center gap-2.5 transition-colors focus-ring shadow-subtle hover:shadow-elevated"
             >
-              <UtensilsCrossed className="w-4 h-4 text-terracotta" aria-hidden="true" />
+              <ShoppingBag className="w-4 h-4" aria-hidden="true" />
+              <span>{tHero.orderOnlineCta[language]}</span>
+            </Link>
+
+            <Link
+              href="/menu"
+              className="min-h-[48px] px-4 py-3 text-white/90 hover:text-white text-sm font-medium inline-flex items-center justify-center gap-2 border-b border-white/40 hover:border-white transition-colors focus-ring self-center"
+            >
+              <UtensilsCrossed className="w-4 h-4 text-white/70" aria-hidden="true" />
               <span>{tHero.exploreMenuCta[language]}</span>
             </Link>
           </div>

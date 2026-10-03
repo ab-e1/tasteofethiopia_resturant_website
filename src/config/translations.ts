@@ -24,6 +24,7 @@ export const TRANSLATIONS = {
         en: 'Authentic Ethiopian hospitality and communal dining in the heart of The Hague.',
       },
       reserveCta: { nl: 'Reserveer een Tafel', en: 'Reserve a Table' },
+      orderOnlineCta: { nl: 'Online Bestellen', en: 'Order Online' },
       exploreMenuCta: { nl: 'Bekijk de Menukaart', en: 'Explore Menu' },
       pillTeff: { nl: 'Handgemaakte Teff Injera', en: 'Handcrafted Teff Injera' },
       pillSlow: { nl: 'Langzaam Gegaarde Wots', en: 'Slow-Simmered Wots' },

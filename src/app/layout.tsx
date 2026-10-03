@@ -4,6 +4,7 @@ import '@/styles/globals.css';
 import { RESTAURANT_CONFIG } from '@/config/restaurant';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { FloatingOrderButton } from '@/components/ui/FloatingOrderButton';
 import { LanguageProvider } from '@/context/LanguageContext';
 
 const fraunces = Fraunces({
@@ -105,6 +106,9 @@ export default function RootLayout({
 
           {/* Global Footer */}
           <Footer />
+
+          {/* Persistent Floating Order Online Action */}
+          <FloatingOrderButton />
         </LanguageProvider>
       </body>
     </html>
